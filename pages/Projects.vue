@@ -5,42 +5,27 @@
       <hr />
       <div class="row">
 
-      <!-- personal website card -->
+      <!-- project card -->
       <b-card
-        title="Personal website"
-        img-src="https://i.imgur.com/Rx6JWwv.png"
-        img-alt="Personal website image"
+        v-for="(project, index) in projects"
+        :key="index"
+        :title="project.title"
+        :img-src="project.image"
+        :img-alt="project.alt"
         img-top
         tag="article"
         style="max-width: 20rem;"
         class="mb-2"
       >
+      
         <b-card-text>
-          Personal website using Nuxt.js
+          {{project.description}}
         </b-card-text>
         <div class="col text-center">
-          <nuxt-link to="/" class="btn btn-secondary">Go</nuxt-link>
+          <a :href="project.link" target="_blank" class="btn btn-secondary">Go</a>
         </div>
       </b-card>
 
-
-      <!-- platzi video card -->
-            <b-card
-        title="Platzi Video"
-        img-src="https://i.imgur.com/zGvrCg3.png"
-        img-alt="Image"
-        img-top
-        tag="article"
-        style="max-width: 20rem;"
-        class="mb-2"
-      >
-        <b-card-text>
-          Prototype done in html and css.
-        </b-card-text>
-        <div class="col text-center">
-          <a href="https://4szni.csb.app/" target="__blank" class="btn btn-secondary">Go</a>
-        </div>
-      </b-card>
       </div>
 
     </b-jumbotron>
@@ -68,12 +53,54 @@
 </template>
 
 <script>
-export default {};
+export default {
+
+  data: function(){
+
+    return{
+      projects:{
+        1 :{
+          title: "Personal website",
+          description: "Website using Nuxt.js",
+          image: "https://i.imgur.com/Rx6JWwv.png",
+          link: "https://nvillabona.netlify.app/",
+          alt: "Personal website preview"
+
+
+        },
+        2: {
+          title: "Platzi video",
+          description: "Prototype with html & css",
+          image: "https://i.imgur.com/zGvrCg3.png",
+          link: "https://4szni.csb.app/",
+          alt: "Platzi video preview"
+        },
+        3: {
+          title: "Quiz App",
+          description: "A quiz app built in VueJs",
+          image: "https://i.imgur.com/D5ntdG6.png",
+          link: "https://quiz-app-nvillabona.netlify.app/",
+          alt: "Quiz App preview"
+        },
+        // 3: {
+        //   title: "",
+        //   description: "",
+        //   image: "",
+        //   link: "",
+        // },
+        
+      }
+    }
+  }
+};
 </script>
 
 <style>
 .card{
   margin: auto;
 
+}
+.card-img{
+  border-bottom: 10px blue;
 }
 </style>
