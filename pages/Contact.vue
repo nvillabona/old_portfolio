@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import GitIcon from '../components/icons/Git-icon';
+import GitIcon from '../components/icons/Git-Icon.vue';
 import TwitterLogo from '../components/icons/Twitter-logo.vue';
 import LinkedInIcon from '../components/icons/LinkedIn-icon.vue';
 import EmailIcon from '../components/icons/Email-icon.vue';
