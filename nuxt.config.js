@@ -38,34 +38,19 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     "bootstrap-vue/nuxt"
+
   ],
 
-    serverMiddleware: [
-      (req, res, next) => {
-        if (/\/{2,}/.test(req.url)) {
-          const url = req.url.replace(/\/{2,}/g, '/')
-          res.writeHead(301, { 'Location': url })
-          return res.end()
-        }
-        next()
-      }
-    ],
+
   
   /*
    ** Build configuration
    */
+
   generate: {
     fallback: true
   },
-  router: {
-    extendRoutes (routes, resolve) {
-      routes.push({
-        name: 'custom',
-        path: '//',
-        component: resolve(__dirname, 'layouts/error.vue')
-      })
-    }
-  },
+
   build: {
     /*
      ** You can extend webpack config here

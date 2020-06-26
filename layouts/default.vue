@@ -2,13 +2,16 @@
   <div>
     <Navbar />
     <nuxt />
+    
   </div>
 </template>
 <script>
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer"
 export default {
   components: {
-    Navbar
+    Navbar,
+    Footer
   }
 };
 </script>
@@ -42,6 +45,8 @@ body {
   animation: 1s appear;
   
 }
+
+
 @keyframes appear {
   0% {
     opacity: 0;

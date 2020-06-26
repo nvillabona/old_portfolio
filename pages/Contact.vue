@@ -1,12 +1,14 @@
 <template>
-  <div class="container">
+  <div class="container text-center">
     <b-jumbotron header="Contact me" lead>
       <hr />
       <div class="row" >
-        <div class="buttons">
+        <div class="buttons  ">
           <a href="https://www.linkedin.com/in/nvillabona/" target="_blank" class="btn btn-primary"><LinkedInIcon class="button-icon" /> LinkedIn</a>
           <a href="https://github.com/nvillabona" target="_blank" class="btn btn-primary"><GitIcon class="button-icon" style="height: 1.3rem;"/>GitHub</a>
           <a href="https://twitter.com/n_villabona" target="_blank" class=" btn btn-primary"><TwitterLogo class="button-icon" />Twitter</a>
+          <a href="mailto:nvillabona@gmai.com" target="_blank" class=" btn btn-primary"><Email-icon class="button-icon" />Email</a>
+          <a href="https://t.me/nvillabona" target="_blank" class=" btn btn-primary"><TelegramIcon class="button-icon" />Telegram</a>
         </div>
       </div>
     </b-jumbotron>
@@ -17,11 +19,15 @@
 import GitIcon from '../components/icons/Git-icon';
 import TwitterLogo from '../components/icons/Twitter-logo.vue';
 import LinkedInIcon from '../components/icons/LinkedIn-icon.vue';
+import EmailIcon from '../components/icons/Email-icon.vue';
+import TelegramIcon from '../components/icons/Telegram-icon.vue';
 export default {
   components:{
     GitIcon,
     TwitterLogo,
-    LinkedInIcon
+    LinkedInIcon,
+    EmailIcon,
+    TelegramIcon
   }
 };
 </script>
@@ -29,13 +35,13 @@ export default {
 <style>
 .button-icon{
   margin-bottom: 1%; 
-
-    width: rem;
+  margin-right: 0%;
+    width: 2rem;
     height: 1rem;
 }
 .buttons {
   text-align: center;
-  margin-bottom: 3rem;
+  margin: auto;
 
   
 }

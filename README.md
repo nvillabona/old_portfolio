@@ -1,6 +1,8 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2da579b-700f-4922-928b-6e5dab99bdba/deploy-status)](https://app.netlify.com/sites/nvillabona/deploys)
+
 # nvillabona
 
-> My cat&#39;s meow Nuxt.js project
+> My personal website using Nuxt.js
 
 ## Build Setup
 
