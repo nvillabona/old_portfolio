@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <b-jumbotron >
+      <b-jumbotron>
         <h1>Nicolás Villabona</h1>
         <hr />
         <br />
@@ -18,15 +18,22 @@
       <div>
         <b-jumbotron>
           <h2 class="text-center">My skills</h2>
-          <hr>
-          <div  class="row">
-            <img v-b-tooltip.hover.top title="Vue js" class="skills__images" src="https://img.icons8.com/color/48/000000/vue-js.png" />
-            <img v-b-tooltip.hover title="React" class="skills__images" src="https://img.icons8.com/office/48/000000/react.png"/>
-            <img v-b-tooltip.hover title="Css" class="skills__images" src="https://img.icons8.com/color/48/000000/css3.png"/>
-            <img v-b-tooltip.hover title="Javascript" class="skills__images" src="https://img.icons8.com/color/48/000000/javascript.png"/>
-            <img v-b-tooltip.hover title="Html" class="skills__images" src="https://img.icons8.com/color/48/000000/html-5.png"/>
-            <img v-b-tooltip.hover title="Git" class="skills__images" src="https://img.icons8.com/color/48/000000/git.png"/>
-          
+          <hr />
+          <div class="row text-center justify-content-md-center">
+            <b-col
+              cols="3"
+              sm="1"
+              v-for="(skill, index) in skills"
+              :key="index"
+              
+            >
+              <img
+                v-b-tooltip.hover.top
+                :title="skill.title"
+                
+                :src="skill.img_link"
+              />
+            </b-col>
           </div>
         </b-jumbotron>
       </div>
@@ -35,7 +42,42 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: function() {
+    return {
+      skills: [
+        {
+          title: "Vue.js",
+          img_link: "https://img.icons8.com/color/48/000000/vue-js.png"
+        },
+        {
+          title: "React",
+          img_link: "https://img.icons8.com/office/48/000000/react.png"
+        },
+        {
+          title: "Css",
+          img_link: "https://img.icons8.com/color/48/000000/css3.png"
+        },
+        {
+          title: "Javascript",
+          img_link: "https://img.icons8.com/color/48/000000/javascript.png"
+        },
+        {
+          title: "Html",
+          img_link: "https://img.icons8.com/color/48/000000/html-5.png"
+        },
+        {
+          title: "Git",
+          img_link: "https://img.icons8.com/color/48/000000/git.png"
+        },
+        {
+          title: "Bootstrap",
+          img_link: "https://img.icons8.com/color/48/000000/bootstrap.png"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style>
@@ -43,7 +85,4 @@ export default {};
   font-weight: 420;
 }
 
-.skills__images {
-  margin: auto;
-}
 </style>
