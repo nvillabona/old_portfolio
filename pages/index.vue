@@ -50,7 +50,7 @@ export default {
         },
         {
           title: "React",
-          img_link: "https://img.icons8.com/office/48/000000/react.png"
+          img_link: "https://img.icons8.com/color/48/000000/react-native.png"
         },
         {
           title: "Css",
