@@ -61,6 +61,10 @@ export default {
           img_link: "https://img.icons8.com/color/48/000000/javascript.png"
         },
         {
+          title: "PHP",
+          img_link:"https://img.icons8.com/offices/48/000000/php-logo.png"
+        },
+        {
           title: "Html",
           img_link: "https://img.icons8.com/color/48/000000/html-5.png"
         },
