@@ -82,6 +82,13 @@ export default {
           link: "https://quiz-app-nvillabona.netlify.app/",
           alt: "Quiz App preview"
         },
+        4: {
+          title: "Social media dashboard",
+          description: "A dashboard with dark mode toggle",
+          image: "https://i.imgur.com/x14jrEu.png",
+          link: "https://social-dashboard-nvillabona.netlify.app/",
+        },
+        
         // 3: {
         //   title: "",
         //   description: "",
