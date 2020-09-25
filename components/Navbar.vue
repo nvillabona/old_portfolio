@@ -5,7 +5,9 @@
       <div class="row">
       <nuxt-link to="/"><img class="nav-logo" src="../static/nav-logo.png" alt="Logo"/> </nuxt-link>
         <nuxt-link to="/Projects" class="nav-link">Projects</nuxt-link >
+        <nuxt-link to="/Courses" class="nav-link">Courses</nuxt-link >
         <nuxt-link to="/Contact" class="nav-link">Contact</nuxt-link >
+        
       </div>
       
     </div>
@@ -32,7 +34,7 @@ export default {
 .nav-link{
   color: #384c61;
   font-weight: 400;
-  margin-left: 3%;
+  margin-left: 1%;
   font-size: 1.2rem;
   text-align: center;
   vertical-align: middle;

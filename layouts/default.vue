@@ -17,6 +17,12 @@ export default {
 </script>
 
 <style>
+
+/* @media (prefers-color-scheme: dark) {
+  body{
+    color: whi;
+  }
+} */
 html {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, "Helvetica Neue", Arial, sans-serif;
