@@ -14,78 +14,19 @@
           >Contact me!</nuxt-link
         >
       </b-jumbotron>
-
-      <div>
-        <b-jumbotron>
-          <h2 class="text-center">My skills</h2>
-          <hr />
-          <div class="row text-center justify-content-center">
-            <b-col
-              cols="3"
-              sm="1"
-              v-for="(skill, index) in skills"
-              :key="index"
-            >
-              <img
-                v-b-tooltip.hover.top
-                :title="skill.title"
-                :src="skill.img_link"
-              />
-            </b-col>
-          </div>
-        </b-jumbotron>
-      </div>
     </div>
+
+      <SkillsContainer />
   </div>
 </template>
 
 <script>
+
+import SkillsContainer from '../components/SkillsContainer';
 export default {
-  data: function() {
-    return {
-      skills: [
-        {
-          title: "Vue.js",
-          img_link: "https://img.icons8.com/color/48/000000/vue-js.png"
-        },
-        {
-          title: "React",
-          img_link: "https://img.icons8.com/color/48/000000/react-native.png"
-        },
-        {
-          title: "Css",
-          img_link: "https://img.icons8.com/color/48/000000/css3.png"
-        },
-        {
-          title: "Javascript",
-          img_link: "https://img.icons8.com/color/48/000000/javascript.png"
-        },
-        {
-          title: "PHP",
-          img_link:"https://img.icons8.com/offices/48/000000/php-logo.png"
-        },
-        {
-          title: "Html",
-          img_link: "https://img.icons8.com/color/48/000000/html-5.png"
-        },
-        {
-          title: "Git",
-          img_link: "https://img.icons8.com/color/48/000000/git.png"
-        },
-        {
-          title: "Bootstrap",
-          img_link: "https://img.icons8.com/color/48/000000/bootstrap.png"
-        },
-        {
-          title: "MySql",
-          img_link: "https://img.icons8.com/ios-filled/48/000000/mysql-logo.png"
-        },
-        {
-          title: "Java",
-          img_link: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png"
-        }
-      ]
-    };
+
+  components: {
+    SkillsContainer
   }
 };
 </script>
