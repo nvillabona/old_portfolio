@@ -11,8 +11,6 @@
             <h4> </h4>
             <Skills title="Other Skills and tools" :data="others" />
         </b-jumbotron>
-      </div>
-    </div>
   </div>
 </template>
 
