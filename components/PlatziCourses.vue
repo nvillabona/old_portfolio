@@ -3,12 +3,9 @@
     <b-jumbotron>
       <h1>Courses i've completed on Platzi</h1>
       <hr />
-      <div class="d-flex justify-content-center">
-        <BounceLoader :loading="loading" :color="'#68d391'" :size="100" />
-      </div>
       <b-row>
         <b-col v-for="(course, index) in Pcourses" :key="index">
-          <a
+          <a 
             :href="`https://platzi.com${course.diploma_link}`"
             target="__blank"
             class="my-card text-reset text-decoration-none"
@@ -21,18 +18,15 @@
       </b-row>
     </b-jumbotron>
   </div>
+  
 </template>
 
 <script>
-import { BounceLoader } from '@saeris/vue-spinners';
 
 export default {
-  name: "PlatziCourses",
-  props: ["Pcourses", "loading"],
-  components:{
-    BounceLoader
-  }
-};
+    name: "PlatziCourses",
+    props:['Pcourses']
+}
 </script>
 
 <style>

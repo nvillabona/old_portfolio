@@ -1,13 +1,16 @@
 <template>
 <div>
+  <div class="d-flex justify-content-center">
 
-  <PlatziCourses v-if="!loading" :Pcourses="courses" :loading="loading"/>
+  <BounceLoader :loading="loading" :color="'#68d391'" :size="100" />
+  </div>
+  <PlatziCourses v-if="!loading" :Pcourses="courses"/>
 </div>
 </template>
 
 <script>
 import PlatziCourses from '../components/PlatziCourses.vue';
-
+import { BounceLoader } from '@saeris/vue-spinners';
 
 export default {
   data() {
@@ -19,7 +22,7 @@ export default {
   },
   components:{
     PlatziCourses,
-
+    BounceLoader
   },
   created() {
     // fetch courses from platzi's api
