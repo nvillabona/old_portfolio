@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <b-jumbotron>
-      <h1>Courses i've completed on Platzi</h1>
+      <h1>Courses i've completed on Platzi:  {{Pcourses.length}}</h1>
       <hr />
       <b-row>
         <b-col v-for="(course, index) in Pcourses" :key="index">
