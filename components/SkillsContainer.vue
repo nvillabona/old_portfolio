@@ -57,6 +57,10 @@ export default {
           img_link: "https://img.icons8.com/color/48/000000/bootstrap.png",
         },
         {
+          title: "Material-ui",
+          img_link: "https://img.icons8.com/color/48/000000/material-ui.png"
+        },
+        {
           title: "MySql",
           img_link:
             "https://img.icons8.com/ios-filled/48/000000/mysql-logo.png",

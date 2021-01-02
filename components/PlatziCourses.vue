@@ -1,11 +1,24 @@
 <template>
   <div class="container">
     <b-jumbotron>
-      <h1>Courses i've completed on Platzi:  {{Pcourses.length}}</h1>
+      <h1>Courses i've completed on Platzi: {{ Pcourses.length }}</h1>
       <hr />
       <b-row>
-        <b-col v-for="(course, index) in Pcourses" :key="index">
-          <a 
+        <b-col col md="2" sm="auto" class="d-flex align-items-center" >
+          <label>Filter courses:</label>
+        </b-col>
+        <b-col col md="10" sm="auto">
+        <b-form-input
+          v-model="filter"
+          placeholder=""
+          class="mb-3 mt-3"
+        >
+        </b-form-input>
+        </b-col>
+      </b-row>
+      <b-row>
+        <b-col v-for="course in filterCourses" :key="course.id">
+          <a
             :href="`https://platzi.com${course.diploma_link}`"
             target="__blank"
             class="my-card text-reset text-decoration-none"
@@ -18,15 +31,31 @@
       </b-row>
     </b-jumbotron>
   </div>
-  
 </template>
 
 <script>
-
 export default {
-    name: "PlatziCourses",
-    props:['Pcourses']
-}
+  name: "PlatziCourses",
+  props: {
+    Pcourses: {
+      type: Array,
+      default: () => [],
+    },
+  },
+  data() {
+    return {
+      filter: "",
+    };
+  },
+
+  computed: {
+    filterCourses() {
+      return this.Pcourses.filter((course) =>
+        course.title.toLowerCase().includes(this.filter.toLowerCase())
+      );
+    },
+  },
+};
 </script>
 
 <style>
