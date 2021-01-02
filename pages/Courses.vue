@@ -1,8 +1,8 @@
 <template>
 <div>
-  <div v-if="loading" class="mt-4 d-flex justify-content-center">
-
+  <div v-if="loading" class="mt-4 d-flex justify-content-center align-items-center loader-container">
   <BounceLoader :loading="loading" :color="'#3b8070'" :size="100" />
+
   </div>
   <PlatziCourses v-if="!loading" :Pcourses="courses"/>
 </div>
@@ -38,6 +38,10 @@ export default {
 </script>
 
 <style >
+.loader-container {
+  height: 90vh;
+  width: 100vw;
+}
 
 </style>
 
