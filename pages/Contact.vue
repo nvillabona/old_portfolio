@@ -8,7 +8,7 @@
           <a href="https://github.com/nvillabona" target="_blank" class="btn btn-primary"><GitIcon class="button-icon" style="height: 1.3rem;"/>GitHub</a>
           <a href="https://gitlab.com/nvillabona" target="_blank" class="btn btn-primary"><GitlabIcon class="button-icon" style="height: 1.3rem;"/>GitLab</a>
           <a href="https://twitter.com/n_villabona" target="_blank" class=" btn btn-primary"><TwitterLogo class="button-icon" />Twitter</a>
-          <a href="mailto:nvillabona@gmai.com" target="_blank" class=" btn btn-primary"><Email-icon class="button-icon" />Email</a>
+          <a href="mailto:nvillabona@gmail.com" target="_blank" class=" btn btn-primary"><Email-icon class="button-icon" />Email</a>
           <a href="https://t.me/nvillabona" target="_blank" class=" btn btn-primary"><TelegramIcon class="button-icon" />Telegram</a>
         </div>
       </div>
